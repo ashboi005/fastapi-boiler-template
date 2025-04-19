@@ -1,7 +1,8 @@
-1) alembic init migrations
+# 1) alembic init migrations
 
-2) paste this in env.py
+# 2) paste this in env.py
 
+```
 import os
 from logging.config import fileConfig
 from sqlalchemy import engine_from_config, pool
@@ -78,10 +79,11 @@ if context.is_offline_mode():
     run_migrations_offline()
 else:
     run_migrations_online() 
+```
 
+# 3) also make a alembic.ini and paste
 
-3) also make a alembic.ini and paste
-
+```
 # A generic, single database configuration.
 
 [alembic]
@@ -191,12 +193,13 @@ formatter = generic
 
 [formatter_generic]
 format = %(levelname)-5.5s [%(name)s] %(message)s
-datefmt = %H:%M:%S 
+datefmt = %H:%M:%S
+```
 
-4) create static and templates folder in app/ if using html or css inside the fastapi app
+# 4) create static and templates folder in app/ if using html or css inside the fastapi app
 
-5) add env variables in .env
+# 5) add env variables in .env
 
-6) configure env variables in core/config.py
+# 6) configure env variables in core/config.py
 
-7) if deploying to AWS lambda then fill in template.yaml and samconfig.toml as needed
+# 7) if deploying to AWS lambda then fill in template.yaml and samconfig.toml as needed
